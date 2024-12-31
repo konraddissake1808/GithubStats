@@ -154,7 +154,7 @@
 
           <div>
             <span class="progress">
-              <span style="background-color: #663399;width: 32.34399%;" class="progress-item"></span><span style="background-color: #3572A5;width: 31.07431%;" class="progress-item"></span><span style="background-color: #3178c6;width: 19.83791%;" class="progress-item"></span><span style="background-color: #e34c26;width: 13.35855%;" class="progress-item"></span><span style="background-color: #f1e05a;width: 2.57097%;" class="progress-item"></span><span style="background-color: #89e051;width: 0.76181%;" class="progress-item"></span><span style="background-color: #701516;width: 0.05245%;" class="progress-item"></span>
+              <span style="background-color: #663399;width: 35.02368%;" class="progress-item"></span><span style="background-color: #3572A5;width: 25.36384%;" class="progress-item"></span><span style="background-color: #3178c6;width: 21.48148%;" class="progress-item"></span><span style="background-color: #e34c26;width: 14.46530%;" class="progress-item"></span><span style="background-color: #f1e05a;width: 2.78397%;" class="progress-item"></span><span style="background-color: #89e051;width: 0.82492%;" class="progress-item"></span><span style="background-color: #701516;width: 0.05680%;" class="progress-item"></span>
             </span>
           </div>
 
@@ -176,7 +176,7 @@
                         CSS
                     </span>
                     <span class="percent">
-                        32.34%
+                        35.02%
                     </span>
             </li>
             <li style="animation-delay: 150ms;">
@@ -195,7 +195,7 @@
                         Python
                     </span>
                     <span class="percent">
-                        31.07%
+                        25.36%
                     </span>
             </li>
             <li style="animation-delay: 300ms;">
@@ -214,7 +214,7 @@
                         TypeScript
                     </span>
                     <span class="percent">
-                        19.84%
+                        21.48%
                     </span>
             </li>
             <li style="animation-delay: 450ms;">
@@ -233,7 +233,7 @@
                         HTML
                     </span>
                     <span class="percent">
-                        13.36%
+                        14.47%
                     </span>
             </li>
             <li style="animation-delay: 600ms;">
@@ -252,7 +252,7 @@
                         JavaScript
                     </span>
                     <span class="percent">
-                        2.57%
+                        2.78%
                     </span>
             </li>
             <li style="animation-delay: 750ms;">
@@ -271,7 +271,7 @@
                         Shell
                     </span>
                     <span class="percent">
-                        0.76%
+                        0.82%
                     </span>
             </li>
             <li style="animation-delay: 900ms;">
@@ -290,7 +290,7 @@
                         Ruby
                     </span>
                     <span class="percent">
-                        0.05%
+                        0.06%
                     </span>
             </li>
           </ul>
