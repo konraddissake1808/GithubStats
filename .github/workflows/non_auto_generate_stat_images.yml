@@ -1,0 +1,89 @@
+# This is a workflow for when changes are pushed to the main branch
+
+name: Generate Git Stats Images
+
+# Controls when the action will run. Triggers the workflow on push events
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+      - .github/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  # This workflow contains a single job called "build"
+  build:
+
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Sequence of tasks that will be executed as part of the job
+    steps:
+
+    # Checks-out repository under $GITHUB_WORKSPACE, so the job can access it
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    # Run using Python 3.13 for consistency and aiohttp
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+        architecture: 'x64'
+        cache: pip
+        cache-dependency-path: '**/requirements.txt'
+
+    # Creates a new branch for generating images or overwrites from older edits
+    - name: Create new branch
+      run: |
+        git pull
+        git checkout -B actions_branch
+
+    # Install dependencies with `pip`
+    - name: Install requirements
+      run: |
+        python3 -m pip install --upgrade pip setuptools wheel
+        python3 -m pip install -r requirements.txt
+
+    # Generate all statistics images
+    - name: Generate images
+      run: |
+        python3 --version
+        python3 git_stats_imgs.py
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        EXCLUDED: ${{ secrets.EXCLUDED }}
+        EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
+        EXCLUDED_REPO_LANGS: ${{ secrets.EXCLUDED_REPO_LANGS }}
+        IS_INCLUDE_FORKED_REPOS: ${{ secrets.IS_INCLUDE_FORKED_REPOS }}
+        IS_EXCLUDE_CONTRIB_REPOS: ${{ secrets.IS_EXCLUDE_CONTRIB_REPOS }}
+        IS_EXCLUDE_ARCHIVE_REPOS: ${{ secrets.IS_EXCLUDE_ARCHIVE_REPOS }}
+        IS_EXCLUDE_PRIVATE_REPOS: ${{ secrets.IS_EXCLUDE_PRIVATE_REPOS }}
+        IS_EXCLUDE_PUBLIC_REPOS: ${{ secrets.IS_EXCLUDE_PUBLIC_REPOS }}
+        REPO_VIEWS: ${{ secrets.REPO_VIEWS }}
+        LAST_VIEWED: ${{ secrets.LAST_VIEWED }}
+        FIRST_VIEWED: ${{ secrets.FIRST_VIEWED }}
+        IS_STORE_REPO_VIEWS: ${{ secrets.IS_STORE_REPO_VIEWS }}
+        MORE_COLLABS: ${{ secrets.MORE_COLLABS }}
+        MORE_REPOS: ${{ secrets.MORE_REPOS }}
+        ONLY_INCLUDED: ${{ secrets.ONLY_INCLUDED }}
+        ONLY_INCLUDED_COLLAB_REPOS: ${{ secrets.ONLY_INCLUDED_COLLAB_REPOS }}
+        EXCLUDED_COLLAB_REPOS: ${{ secrets.EXCLUDED_COLLAB_REPOS }}
+        MORE_COLLAB_REPOS: ${{ secrets.MORE_COLLAB_REPOS }}
+
+    # Commits all changed files to the repository
+    - name: Commit to the repo
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        git commit -m 'Generate GitHub stats images'
+        git push origin actions_branch --force

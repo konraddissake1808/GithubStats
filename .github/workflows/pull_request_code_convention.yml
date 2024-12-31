@@ -1,0 +1,44 @@
+name: Pull Request Code Convention Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+
+  ruff:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    # Run using Python 3.13 for consistency
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+        architecture: 'x64'
+        cache: pip
+        cache-dependency-path: '**/requirements.txt'
+
+    # Install Ruff and Black
+    - name: Install ruff and black
+      run: |
+        python -m pip install --upgrade pip
+        pip install --user ruff
+        pip install --user black
+
+    # Use Ruff to lint all files
+    - name: Ruff lint
+      run: ruff check --output-format=github .
+
+    # Use Black to check format for all files
+    - name: Black lint
+      run: black --check .
