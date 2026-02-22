@@ -154,7 +154,7 @@
 
           <div>
             <span class="progress">
-              <span style="background-color: #4F5D95;width: 57.60475%;" class="progress-item"></span><span style="background-color: #3178c6;width: 25.84442%;" class="progress-item"></span><span style="background-color: #663399;width: 7.44114%;" class="progress-item"></span><span style="background-color: #3572A5;width: 4.47807%;" class="progress-item"></span><span style="background-color: #e34c26;width: 2.84645%;" class="progress-item"></span><span style="background-color: #f1e05a;width: 1.48698%;" class="progress-item"></span><span style="background-color: #89e051;width: 0.14564%;" class="progress-item"></span><span style="background-color: #ff5a03;width: 0.13376%;" class="progress-item"></span><span style="background-color: #701516;width: 0.01003%;" class="progress-item"></span><span style="background-color: #384d54;width: 0.00877%;" class="progress-item"></span>
+              <span style="background-color: #4F5D95;width: 57.12844%;" class="progress-item"></span><span style="background-color: #3178c6;width: 25.72794%;" class="progress-item"></span><span style="background-color: #663399;width: 8.06143%;" class="progress-item"></span><span style="background-color: #3572A5;width: 4.48886%;" class="progress-item"></span><span style="background-color: #e34c26;width: 2.82291%;" class="progress-item"></span><span style="background-color: #f1e05a;width: 1.47468%;" class="progress-item"></span><span style="background-color: #89e051;width: 0.14444%;" class="progress-item"></span><span style="background-color: #ff5a03;width: 0.13265%;" class="progress-item"></span><span style="background-color: #701516;width: 0.00995%;" class="progress-item"></span><span style="background-color: #384d54;width: 0.00869%;" class="progress-item"></span>
             </span>
           </div>
 
@@ -176,7 +176,7 @@
                         PHP
                     </span>
                     <span class="percent">
-                        57.60%
+                        57.13%
                     </span>
             </li>
             <li style="animation-delay: 150ms;">
@@ -195,7 +195,7 @@
                         TypeScript
                     </span>
                     <span class="percent">
-                        25.84%
+                        25.73%
                     </span>
             </li>
             <li style="animation-delay: 300ms;">
@@ -214,7 +214,7 @@
                         CSS
                     </span>
                     <span class="percent">
-                        7.44%
+                        8.06%
                     </span>
             </li>
             <li style="animation-delay: 450ms;">
@@ -233,7 +233,7 @@
                         Python
                     </span>
                     <span class="percent">
-                        4.48%
+                        4.49%
                     </span>
             </li>
             <li style="animation-delay: 600ms;">
@@ -252,7 +252,7 @@
                         HTML
                     </span>
                     <span class="percent">
-                        2.85%
+                        2.82%
                     </span>
             </li>
             <li style="animation-delay: 750ms;">
@@ -271,7 +271,7 @@
                         JavaScript
                     </span>
                     <span class="percent">
-                        1.49%
+                        1.47%
                     </span>
             </li>
             <li style="animation-delay: 900ms;">
@@ -290,7 +290,7 @@
                         Shell
                     </span>
                     <span class="percent">
-                        0.15%
+                        0.14%
                     </span>
             </li>
             <li style="animation-delay: 1050ms;">
